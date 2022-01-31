@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/titleLayout"
+        android:layout_height="wrap_content"
+        android:layout_width="348dp"
+        android:layout_marginTop="98dp"
+        android:layout_gravity="center_horizontal"
+        app:counterMaxLength="20"
+        android:hint="Add a title"
+        app:boxStrokeColor="#68B2A0"
+        android:textColor="#68B2A0"
+        android:textColorHint="#68B2A0"
+        app:errorTextColor="@color/error"
+        android:inputType="textAutoCorrect"
+        app:hintTextColor="#68B2A0"
+        app:boxStrokeErrorColor="#F75010"
+        app:errorIconTint="@color/error"
+        app:boxStrokeWidth="2dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/titleTxt"
+            android:ems="16"
+            android:textColor="#68B2A0"
+            android:textSize="18sp"
+            android:fontFamily="@font/montserrat"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:maxLength="21" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/contentLayout"
+        android:layout_width="348dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="184dp"
+        app:counterEnabled="true"
+        app:counterMaxLength="256"
+        android:hint="Add description"
+        android:inputType="textMultiLine|textAutoCorrect"
+        android:textColor="#68B2A0"
+        android:textColorHint="#68B2A0"
+        app:hintTextColor="#68B2A0"
+        app:layout_anchor="@id/titleLayout"
+        app:boxStrokeErrorColor="#F75010"
+        app:boxStrokeColor="#68B2A0"
+        app:boxStrokeWidth="2dp"
+        app:errorIconTint="@color/error"
+        app:errorTextColor="@color/error"
+        app:layout_anchorGravity="center|bottom"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:counterTextColor="@color/main_green"
+        app:counterOverflowTextColor="@color/error">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/contentTxt"
+            android:ems="16"
+            android:minLines="3"
+            android:textSize="18sp"
+            android:gravity="top"
+            android:fontFamily="@font/montserrat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLength="356"
+            android:maxLines="20"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/topAppBar"
+        style="@style/Widget.MaterialComponents.Toolbar.Primary"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/header3"
+        android:layout_gravity="center_horizontal"
+        app:layout_anchor="@+id/topAppBar"
+        app:layout_anchorGravity="center"
+        app:menu="@menu/top_app_bar"
+        app:subtitleTextColor="#205072"
+        app:titleCentered="true"
+        app:titleTextColor="#205072">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:layout_width="48dp"
+                android:layout_height="48dp">
+                <ImageView
+                    android:layout_width="34dp"
+                    android:layout_height="34dp"
+                    app:srcCompat="@drawable/ic_round_person_24"
+                    android:layout_gravity="center|center"/>
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    app:srcCompat="@drawable/empty_circle"/>
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/textPost"
+                android:paddingTop="4dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_bold"
+                android:gravity="center_horizontal"
+                android:paddingLeft="14dp"
+                android:text="Text Post"
+                android:textColor="#68B2A0"
+                android:textSize="24sp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/sendBtn"
+                style="@style/Widget.App.Button.OutlinedButton.Icon"
+                android:backgroundTint="#68B2A0"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                app:icon="@drawable/ic_round_arrow_upward_24"
+                app:iconGravity="textStart"
+                app:iconSize="24dp"
+                app:iconTint="#E0ECDE"
+                app:strokeWidth="2dp"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.Button.Circle"
+                app:strokeColor="#68B2A0" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/closeBtn"
+                android:layout_marginLeft="14dp"
+                android:layout_marginRight="14dp"
+                style="@style/Widget.App.Button.OutlinedButton.Icon"
+                android:backgroundTint="#68B2A0"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                app:icon="@drawable/ic_round_close_24"
+                app:iconGravity="textStart"
+                app:iconSize="24dp"
+                app:iconTint="#E0ECDE"
+                app:strokeWidth="2dp"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.Button.Circle"
+                app:strokeColor="#68B2A0" />
+        </LinearLayout>
+    </com.google.android.material.appbar.MaterialToolbar>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingBottom="100dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/communities_recycle_view"
+        android:layout_width="match_parent"
+        android:paddingTop="28dp"
+        android:clipToPadding="false"
+        android:layout_marginTop="110dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true" />
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/topAppBar"
+        style="@style/Widget.MaterialComponents.Toolbar.Primary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/header2"
+        app:layout_anchorGravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:menu="@menu/top_app_bar"
+        app:titleCentered="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/sendBtn"
+                        style="@style/Widget.App.Button.OutlinedButton.Icon"
+                        android:backgroundTint="#E0ECDE"
+                        android:layout_width="36dp"
+                        android:layout_height="34dp"
+                        android:layout_marginTop="6dp"
+                        app:icon="@drawable/ic_round_keyboard_backspace"
+                        app:iconGravity="textStart"
+                        app:iconSize="34dp"
+                        app:iconTint="#fff"
+                        app:strokeWidth="2dp"
+                        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.Button.Circle"
+                        app:strokeColor="#E0ECDE" />
+
+                    <TextView
+                        android:id="@+id/name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="Community Name"
+                        android:layout_marginTop="-4dp"
+                        android:layout_marginBottom="-6dp"
+                        android:textColor="#205072"
+                        android:textSize="22sp"
+                        app:layout_anchor="@+id/nestedScrollView"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <FrameLayout
+                        android:id="@+id/frameLayout"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="14dp"
+                        android:layout_marginEnd="24dp"
+                        app:layout_anchor="@+id/nestedScrollView"
+                        app:layout_anchorGravity="start|top">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center|center"
+                            app:srcCompat="@drawable/ic_round_dashboard" />
+
+                        <ImageView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            app:srcCompat="@drawable/empty_circle_white" />
+                    </FrameLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:layout_marginEnd="18dp"
+                android:layout_marginTop="-4dp"
+                android:fontFamily="@font/montserrat"
+                android:text="communityusername"
+                android:textColor="#68B2A0"
+                android:textSize="16sp"
+
+                app:layout_anchor="@+id/nestedScrollView" />
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:paddingTop="2dp"
+                android:layout_marginEnd="18dp"
+                android:fontFamily="@font/montserrat"
+                android:text="Community Description"
+                android:textColor="#205072"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp"
+                app:layout_anchor="@+id/nestedScrollView" />
+        </LinearLayout>
+    </com.google.android.material.appbar.MaterialToolbar>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+

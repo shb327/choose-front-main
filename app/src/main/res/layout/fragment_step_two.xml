@@ -1,0 +1,123 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="184dp"
+        android:layout_height="66dp"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="Enter Your Email Address"
+        android:textAlignment="center"
+        android:textColor="#205072"
+        android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="213dp"
+        android:layout_height="53dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/montserrat"
+        android:text="Do no enter something random, you can't trick us"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"
+        android:textColor="#68B2A0"
+        android:textSize="16sp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/outlinedTextField1"
+        android:theme="@style/TextInputLayoutStyle"
+        android:layout_width="256dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/textView2"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:fontFamily="@font/montserrat"
+        app:boxStrokeColor="#56C596"
+        android:textColorHint="#56C596"
+        android:textColor="#56C596"
+        app:hintTextColor="#56C596"
+        app:boxStrokeErrorColor="#F75010"
+        app:errorIconTint="@color/error"
+        app:errorTextColor="@color/error"
+        android:inputType="text"
+        android:maxLines="1"
+        android:hint="Email Address"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/email"
+            android:maxLines="1"
+            android:inputType="text"
+            android:maxLength="60"
+            android:textColor="#56C596"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/outlinedTextField2"
+        android:theme="@style/TextInputLayoutStyle"
+        android:layout_width="256dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:fontFamily="@font/montserrat"
+        app:boxStrokeColor="#56C596"
+        android:textColorHint="#56C596"
+        android:textColor="#56C596"
+        app:hintTextColor="#56C596"
+        app:boxStrokeErrorColor="#F75010"
+        app:errorIconTint="@color/error"
+        app:errorTextColor="@color/error"
+        android:inputType="textPersonName"
+        android:hint="First Name"
+        android:layout_below="@+id/outlinedTextField1"
+        android:layout_centerHorizontal="true"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/first"
+            android:maxLines="1"
+            android:maxLength="20"
+            android:textColor="#56C596"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/outlinedTextField3"
+        android:theme="@style/TextInputLayoutStyle"
+        android:layout_width="256dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:fontFamily="@font/montserrat"
+        app:boxStrokeColor="#56C596"
+        android:textColorHint="#56C596"
+        android:textColor="#56C596"
+        app:hintTextColor="#56C596"
+        app:boxStrokeErrorColor="#F75010"
+        app:errorIconTint="@color/error"
+        app:errorTextColor="@color/error"
+        android:inputType="textPersonName"
+        android:hint="Last Name"
+        android:layout_below="@+id/outlinedTextField2"
+        android:layout_centerHorizontal="true"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/last"
+            android:maxLines="1"
+            android:maxLength="20"
+            android:textColor="#56C596"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+</RelativeLayout>

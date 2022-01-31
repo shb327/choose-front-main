@@ -1,0 +1,19 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <AutoCompleteTextView
+        android:id="@+id/textout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="#68B2A0"
+        android:drawableRight="@drawable/ic_round_close_24"
+        android:ems="16"
+        android:fontFamily="@font/montserrat"
+        android:hint="Option"
+        android:inputType="textAutoCorrect"
+        android:textColor="#68B2A0"
+        android:textColorHint="#68B2A0" />
+</RelativeLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="28dp"
+        android:layout_marginRight="28dp"
+        android:fontFamily="@font/montserrat"
+        android:text="Sorry, but it's possible to participate in play-off voting only once."
+        android:textColor="#68B2A0"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/play"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+        android:layout_width="328dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/desc"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Play"
+        android:textColor="#329D9C"
+        app:strokeColor="#329D9C"
+        app:strokeWidth="2dp" />
+
+    <Button
+        android:id="@+id/stats"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+        android:layout_width="328dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/play"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:text="Statistics"
+        android:textColor="#329D9C"
+        app:strokeColor="#329D9C"
+        app:strokeWidth="2dp" />
+
+</RelativeLayout>

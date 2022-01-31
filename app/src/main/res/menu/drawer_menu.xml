@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <item
+        android:id="@+id/communities"
+        android:icon="@drawable/ic_round_space_dashboard_24"
+        android:title="Manage Communities"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/create"
+        android:icon="@drawable/ic_round_create_24"
+        android:title="Create Community"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/delete"
+        android:icon="@drawable/ic_round_delete_24"
+        android:title="Delete Community"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/logout"
+        android:icon="@drawable/ic_round_logout_24"
+        android:title="Log Out"
+        app:showAsAction="ifRoom" />
+</menu>

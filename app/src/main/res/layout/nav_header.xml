@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="90dp"
+    android:background="#CDE0C9"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    android:padding="2dp"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nestedScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:paddingBottom="100dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="wrap_content"
+            android:layout_height="103dp"
+            app:layout_anchor="@+id/nestedScrollView"
+            app:layout_anchorGravity="top" />
+
+        <TextView
+            android:id="@+id/settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="72dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="Additional"
+            android:gravity="end"
+            android:textColor="#205072"
+            android:textSize="22sp"
+            app:layout_anchor="@+id/nestedScrollView"
+            app:layout_anchorGravity="start|top"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="72dp"
+            android:gravity="end"
+            android:layout_marginEnd="18dp"
+            android:layout_marginTop="46dp"
+            android:fontFamily="@font/montserrat"
+            android:text="username"
+            android:textColor="#68B2A0"
+            android:textSize="16sp"
+            app:layout_anchor="@+id/nestedScrollView"
+            app:layout_anchorGravity="start|top"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/name" />
+
+        <FrameLayout
+            android:id="@+id/frameLayout"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="18dp"
+            app:layout_anchor="@+id/nestedScrollView"
+            app:layout_anchorGravity="start|top">
+
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                app:srcCompat="@drawable/ic_round_person"
+                android:layout_gravity="center|center"/>
+
+            <ImageView
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                app:srcCompat="@drawable/empty_circle_white" />
+        </FrameLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</LinearLayout>

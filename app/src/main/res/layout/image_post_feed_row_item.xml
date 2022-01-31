@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/image"
+                    android:layout_width="match_parent"
+                    android:layout_height="194dp"
+                    app:srcCompat="@drawable/play_off_upload"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="Image" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Post Title"
+                        android:textAppearance="?attr/textAppearanceHeadline6"
+                        android:textColor="#329D9C" />
+
+                    <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/author"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="by username"
+                        android:textAppearance="?attr/textAppearanceBody2"
+                        android:textColor="#329D9C" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" " />
+                    <TextView
+                        android:id="@+id/community"
+                        android:visibility="gone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="for community"
+                        android:textAppearance="?attr/textAppearanceBody2"
+                        android:textColor="#329D9C" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/description"
+                        android:layout_width="366dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Post Content"
+                        android:textAppearance="?attr/textAppearanceBody2"
+                        android:textColor="#205072" />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.085"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/display_container">
+
+                        <ImageView
+                            android:id="@+id/imageView4"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_marginTop="4dp"
+                            app:srcCompat="@drawable/onh" />
+
+                        <TextView
+                            android:id="@+id/likeCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:fontFamily="@font/montserrat"
+                            android:text="0"
+                            android:textColor="#329D9C"
+                            android:textSize="20sp" />
+
+                        <ImageView
+                            android:id="@+id/imageView3"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_marginTop="4dp"
+                            app:srcCompat="@drawable/obh" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+
+<!--        <com.google.android.material.card.MaterialCardView-->
+<!--            android:id="@+id/card1"-->
+<!--            android:layout_width="394dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_margin="8dp">-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="horizontal">-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="horizontal">-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:orientation="vertical"-->
+<!--                        android:padding="14dp">-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/title"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:text="Post Title"-->
+<!--                            android:textAppearance="?attr/textAppearanceHeadline6"-->
+<!--                            android:textColor="#329D9C" />-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/author"-->
+<!--                            android:layout_width="366dp"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:text="by username"-->
+<!--                            android:textAppearance="?attr/textAppearanceBody2"-->
+<!--                            android:textColor="#329D9C" />-->
+
+<!--                        <ImageView-->
+<!--                            android:id="@+id/image"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:scaleType="fitCenter"-->
+<!--                            android:adjustViewBounds="true"-->
+<!--                            android:layout_marginTop="8dp"-->
+<!--                            app:srcCompat="@drawable/ic_image" />-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/description"-->
+<!--                            android:layout_width="366dp"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginTop="8dp"-->
+<!--                            android:text="Post Content"-->
+<!--                            android:textAppearance="?attr/textAppearanceBody2"-->
+<!--                            android:textColor="#205072" />-->
+
+<!--                        <LinearLayout-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginTop="16dp"-->
+<!--                            android:orientation="horizontal"-->
+<!--                            app:layout_constraintEnd_toEndOf="parent"-->
+<!--                            app:layout_constraintHorizontal_bias="0.085"-->
+<!--                            app:layout_constraintStart_toStartOf="parent"-->
+<!--                            app:layout_constraintTop_toBottomOf="@+id/display_container">-->
+
+<!--                            <ImageView-->
+<!--                                android:id="@+id/imageView4"-->
+<!--                                android:layout_width="24dp"-->
+<!--                                android:layout_height="24dp"-->
+<!--                                android:layout_marginTop="4dp"-->
+<!--                                app:srcCompat="@drawable/onh" />-->
+
+<!--                            <TextView-->
+<!--                                android:id="@+id/likeCount"-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_marginLeft="10dp"-->
+<!--                                android:layout_marginRight="10dp"-->
+<!--                                android:fontFamily="@font/montserrat"-->
+<!--                                android:text="0"-->
+<!--                                android:textColor="#329D9C"-->
+<!--                                android:textSize="20sp" />-->
+
+<!--                            <ImageView-->
+<!--                                android:id="@+id/imageView3"-->
+<!--                                android:layout_width="24dp"-->
+<!--                                android:layout_height="24dp"-->
+<!--                                android:layout_marginTop="4dp"-->
+<!--                                app:srcCompat="@drawable/obh" />-->
+
+<!--                        </LinearLayout>-->
+<!--                    </LinearLayout>-->
+<!--                </LinearLayout>-->
+<!--            </LinearLayout>-->
+<!--        </com.google.android.material.card.MaterialCardView>-->
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

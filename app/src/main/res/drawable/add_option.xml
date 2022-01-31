@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item>
+        <shape android:shape="oval" android:padding="10dp">
+            <corners android:radius="24dp" />
+            <gradient
+                android:endColor="#ffffff"
+                android:startColor="#ffffff"
+                />
+        </shape>
+    </item>
+    <item android:drawable="@drawable/ic_round_add_circle_outline_24"
+        android:left="-2dp"
+        android:top="-2dp"
+        android:right="-2dp"
+        android:bottom="-2dp">
+    </item>
+</layer-list>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.choose">
+
+    <uses-permission
+        android:name="android.permission.AUTHENTICATE_ACCOUNTS"
+        android:maxSdkVersion="22" />
+    <uses-permission
+        android:name="android.permission.GET_ACCOUNTS"
+        android:maxSdkVersion="22" />
+    <uses-permission
+        android:name="android.permission.INTERNET" />
+    <uses-permission
+        android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission
+        android:name="android.permission.WRITE_SYNC_SETTINGS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Choose"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".community.CreateCommunityActivity"
+            android:exported="false" />
+        <activity
+            android:name=".community.EditCommunityActivity"
+            android:exported="false" />
+        <activity
+            android:name=".play.WinnerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".home.SettingsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".play.PlayOffPlayActivity"
+            android:exported="false" />
+        <activity
+            android:name=".play.PlayOffStatsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".community.CommunityDisplay"
+            android:exported="false" />
+        <activity
+            android:name=".create.ChooseType"
+            android:exported="false"
+            android:theme="@style/Theme.ThemeOne"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".post.PostDisplay"
+            android:exported="false" />
+        <activity
+            android:name=".home.HomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".registration.Registration"
+            android:exported="false"
+            android:theme="@style/Theme.ThemeOne" />
+
+        <meta-data
+            android:name="com.google.android.actions"
+            android:resource="@xml/actions" />
+
+        <activity
+            android:name=".start.StartingActivity"
+            android:exported="false"
+            android:theme="@style/Theme.ThemeOne" />
+        <activity
+            android:name=".login.LoginActivity"
+            android:exported="false"
+            android:theme="@style/Theme.ThemeOne" />
+        <activity
+            android:name=".start.SplashActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.ThemeOne">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".authentification.ChooseAuthenticatorService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.accounts.AccountAuthenticator" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.accounts.AccountAuthenticator"
+                android:resource="@xml/authenticator" />
+        </service>
+    </application>
+
+</manifest>

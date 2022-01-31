@@ -1,0 +1,225 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="172dp"
+            android:layout_height="63dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:gravity="center_horizontal"
+            android:text="Check Your Mail Box"
+            android:textAlignment="center"
+            android:textColor="#205072"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_verify"
+            android:layout_width="213dp"
+            android:layout_height="53dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="28dp"
+            android:fontFamily="@font/montserrat"
+            android:text="Copy four digit number, which we just send you"
+            android:textAlignment="center"
+            android:textColor="#68B2A0"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/field1CardView"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="92dp"
+            app:boxStrokeColor="#56C596"
+            android:textColorHint="#56C596"
+            android:textColor="#56C596"
+            app:hintTextColor="#56C596"
+            app:boxStrokeErrorColor="#F75010"
+            app:errorIconTint="@color/white"
+            app:errorTextColor="@color/error"
+            app:layout_constraintEnd_toStartOf="@+id/textView"
+            app:layout_constraintTop_toBottomOf="@+id/text_verify">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/field1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:textColor="#56C596"
+                android:fontFamily="@font/montserrat_bold"
+                android:gravity="center_vertical|center_horizontal"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="1"
+                android:singleLine="true"
+                android:textColorHint="#56C596"
+                android:textSize="16sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/field2CardView"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="92dp"
+            app:boxStrokeColor="#56C596"
+            android:textColorHint="#56C596"
+            android:textColor="#56C596"
+            app:hintTextColor="#56C596"
+            app:boxStrokeErrorColor="#F75010"
+            app:errorIconTint="@color/white"
+            app:errorTextColor="@color/error"
+            app:layout_constraintEnd_toStartOf="@+id/field3CardView"
+            app:layout_constraintStart_toEndOf="@+id/field1CardView"
+            app:layout_constraintTop_toBottomOf="@+id/text_verify">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/field2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:textColor="#56C596"
+                android:fontFamily="@font/montserrat_bold"
+                android:gravity="center_vertical|center_horizontal"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="1"
+                android:singleLine="true"
+                android:textColorHint="#56C596"
+                android:textSize="16sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/field3CardView"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="92dp"
+            app:boxStrokeColor="#56C596"
+            android:textColorHint="#56C596"
+            android:textColor="#56C596"
+            app:hintTextColor="#56C596"
+            app:boxStrokeErrorColor="#F75010"
+            app:errorIconTint="@color/white"
+            app:errorTextColor="@color/error"
+            android:theme="@style/TextInputLayoutStyle"
+            app:layout_constraintEnd_toStartOf="@+id/field4CardView"
+            app:layout_constraintStart_toEndOf="@+id/field2CardView"
+            app:layout_constraintTop_toBottomOf="@+id/text_verify">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/field3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:textColor="#56C596"
+                android:fontFamily="@font/montserrat_bold"
+                android:gravity="center_vertical|center_horizontal"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="1"
+                android:singleLine="true"
+                android:textColorHint="#56C596"
+                android:textSize="16sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/field4CardView"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="92dp"
+            app:boxStrokeColor="#56C596"
+            android:textColorHint="#56C596"
+            android:textColor="#56C596"
+            app:hintTextColor="#56C596"
+            app:boxStrokeErrorColor="#F75010"
+            app:errorIconTint="@color/white"
+            app:errorTextColor="@color/error"
+            app:layout_constraintStart_toEndOf="@+id/textView"
+            app:layout_constraintTop_toBottomOf="@+id/text_verify">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/field4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:textColor="#56C596"
+                android:fontFamily="@font/montserrat_bold"
+                android:gravity="center_vertical|center_horizontal"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="1"
+                android:singleLine="true"
+                android:textColorHint="#56C596"
+                android:textSize="16sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <TextView
+            android:id="@+id/errortext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif"
+            android:text="Please double-check your Varification Code"
+            android:textAlignment="center"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/field2CardView" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="38dp"
+            android:fontFamily="sans-serif"
+            android:text="I didn’t receive the code,"
+            android:textAlignment="center"
+            android:textColor="#68B2A0"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.369"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/field2CardView" />
+
+        <TextView
+            android:id="@+id/reend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="38dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="sans-serif"
+            android:text="Resend"
+            android:textColor="#205072"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.061"
+            app:layout_constraintStart_toEndOf="@+id/textView4"
+            app:layout_constraintTop_toBottomOf="@+id/field2CardView" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>

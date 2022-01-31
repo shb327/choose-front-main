@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/edit_name"
+    android:layout_width="320dp"
+    android:layout_height="600dp"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#E0ECDE"
+        android:padding="12dp"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button"
+            style="@style/Widget.App.Button.OutlinedButton.Icon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="start|center"
+            app:icon="@drawable/ic_round_close_24"
+            app:iconGravity="textStart"
+            app:iconSize="20dp"
+            app:iconTint="#329D9C"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.Button.Circle"
+            app:strokeColor="#329D9C" />
+        <TextView
+            android:id="@+id/lbl_your_name"
+            android:text="Chose Community:"
+            android:paddingRight="40dp"
+            android:fontFamily="@font/montserrat"
+            android:textSize="18sp"
+            android:textColor="#329D9C"
+            android:layout_marginLeft="12dp"
+            android:layout_gravity="start|center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/dialog_recycle_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true" />
+</LinearLayout>

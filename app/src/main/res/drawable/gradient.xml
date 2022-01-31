@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item>
+        <shape android:shape="oval" android:padding="10dp">
+            <corners android:radius="24dp" />
+            <gradient
+                android:endColor="#329D9C"
+                android:startColor="#7BE495"
+                android:angle="90"
+                />
+        </shape>
+    </item>
+    <item android:drawable="@drawable/ic_round_add_24"
+        android:left="8dp"
+        android:top="8dp"
+        android:right="8dp"
+        android:bottom="8dp">
+    </item>
+</layer-list>

@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/titleLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="348dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="38dp"
+        android:ems="16"
+        android:hint="Add a title"
+        android:inputType="textAutoCorrect"
+        android:textColor="#68B2A0"
+        android:textColorHint="#68B2A0"
+        app:boxStrokeColor="#68B2A0"
+        app:boxStrokeErrorColor="#F75010"
+        app:boxStrokeWidth="2dp"
+        app:counterMaxLength="20"
+        app:errorIconTint="@color/error"
+        app:errorTextColor="@color/error"
+        app:hintTextColor="#68B2A0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/titleTxt"
+            android:layout_width="348dp"
+            android:layout_height="wrap_content"
+            android:ems="16"
+            android:fontFamily="@font/montserrat"
+            android:maxLength="20"
+            android:textColor="#68B2A0"
+            android:textSize="18sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="348dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/upload"
+        app:layout_anchorGravity="bottom|center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleLayout"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            android:layout_weight="1" >
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:textColor="#68B2A0"
+                android:text="8"
+                android:ems="3"
+                android:fontFamily="@font/montserrat"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="#68B2A0"
+                android:gravity="center"
+                android:text="16"
+                android:ems="3"
+                android:fontFamily="@font/montserrat"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/textView14"
+                android:gravity="center"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="#68B2A0"
+                android:text="32"
+                android:ems="3"
+                android:fontFamily="@font/montserrat"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="1" >
+            <RadioButton
+                android:id="@+id/eight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text=""
+                android:checked="true"
+                android:textColor="#68B2A0"
+                android:layout_marginLeft="41dp"
+                android:layout_marginTop="-20dp"
+                android:buttonTint="#68B2A0"
+                android:fontFamily="@font/montserrat_bold"
+                android:padding="24dp"
+                android:textSize="16sp"
+                android:gravity="center" />
+            <RadioButton
+                android:id="@+id/sixteen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#68B2A0"
+                android:layout_marginLeft="41dp"
+                android:layout_marginTop="-20dp"
+                android:buttonTint="#68B2A0"
+                android:fontFamily="@font/montserrat_bold"
+                android:layout_weight="1"
+                android:padding="24dp"
+                android:textSize="16sp"
+                android:gravity="center" />
+            <RadioButton
+                android:id="@+id/thirtyTwo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="#68B2A0"
+                android:layout_marginTop="-20dp"
+                android:buttonTint="#68B2A0"
+                android:layout_marginLeft="41dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:padding="24dp"
+                android:textSize="16sp"
+                android:gravity="center" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            android:layout_weight="1" >
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:textColor="#68B2A0"
+                android:text="64"
+                android:ems="3"
+                android:fontFamily="@font/montserrat"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="#68B2A0"
+                android:gravity="center"
+                android:text="128"
+                android:ems="3"
+                android:fontFamily="@font/montserrat"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/textView17"
+                android:gravity="center"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="#68B2A0"
+                android:text="256"
+                android:ems="3"
+                android:fontFamily="@font/montserrat"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="1" >
+            <RadioButton
+                android:id="@+id/sixtyFour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text=""
+                android:textColor="#68B2A0"
+                android:layout_marginLeft="41dp"
+                android:layout_marginTop="-20dp"
+                android:buttonTint="#68B2A0"
+                android:fontFamily="@font/montserrat_bold"
+                android:padding="24dp"
+                android:textSize="16sp"
+                android:gravity="center" />
+            <RadioButton
+                android:id="@+id/hundredTwentyEight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#68B2A0"
+                android:layout_marginLeft="41dp"
+                android:layout_marginTop="-20dp"
+                android:buttonTint="#68B2A0"
+                android:fontFamily="@font/montserrat_bold"
+                android:layout_weight="1"
+                android:padding="24dp"
+                android:textSize="16sp"
+                android:gravity="center" />
+            <RadioButton
+                android:id="@+id/twoHundredFiftySix"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="#68B2A0"
+                android:layout_marginTop="-20dp"
+                android:buttonTint="#68B2A0"
+                android:layout_marginLeft="41dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:padding="24dp"
+                android:textSize="16sp"
+                android:gravity="center" />
+        </LinearLayout>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/continueBtn"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+        android:layout_width="180dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="160dp"
+        android:fontFamily="@font/montserrat"
+        android:text="Continue"
+        android:textColor="#68B2A0"
+        android:textSize="16dp"
+        app:icon="@drawable/ic_round_menu_24"
+        app:iconTint="#68B2A0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+        app:strokeColor="#68B2A0"
+        app:strokeWidth="2dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
