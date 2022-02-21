@@ -83,7 +83,7 @@ public class ChooseType extends AppCompatActivity {
             }
         });
 
-        backdropContainer = findViewById(R.id.backdropcontainer);
+        backdropContainer = findViewById(R.id.backdropContainer);
         backdropContainer.attachToolbar(findViewById(R.id.toolbar))
                 .dropInterpolator(new LinearInterpolator())
                 .dropHeight(0)

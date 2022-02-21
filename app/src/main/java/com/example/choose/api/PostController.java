@@ -8,8 +8,6 @@ import com.example.choose.dto.GetFeedRequestDTO;
 import com.example.choose.dto.GetFeedResponseDTO;
 import com.example.choose.dto.GetUserFeedRequestDTO;
 import com.example.choose.dto.LikeStatus;
-import com.example.choose.dto.PlayOffOptionDTO;
-import com.example.choose.dto.PlayOffRequestOptionDTO;
 import com.example.choose.dto.PostDTO;
 
 import java.util.List;

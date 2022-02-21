@@ -84,6 +84,7 @@ public class PlayOffPostFragment extends Fragment {
         Bundle bundle = new Bundle();
         secondFragment = true;
         bundle.putInt("choice", PlayOffChooseFragment.getNumber());
+        bundle.putString("title", PlayOffChooseFragment.getTitle());
         playOffSelectFragment.setArguments(bundle);
         showFragment(playOffSelectFragment, 1);
     }

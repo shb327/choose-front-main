@@ -14,13 +14,9 @@ import android.widget.Toast;
 
 import com.example.choose.R;
 import com.example.choose.api.CommunityController;
-import com.example.choose.create.ChooseType;
 import com.example.choose.dto.CommunityDTO;
-import com.example.choose.dto.CreateTextPostRequestDTO;
 import com.example.choose.dto.EditCommunityRequestDTO;
-import com.example.choose.dto.PostDTO;
 import com.example.choose.home.HomeActivity;
-import com.example.choose.home.SettingsActivity;
 import com.example.choose.retrofit.RetrofitUtils;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
@@ -54,8 +50,8 @@ public class EditCommunityActivity extends AppCompatActivity {
         Bundle extras = getIntent().getExtras();
         CommunityDTO community = (CommunityDTO) extras.getSerializable("community");
 
-        titleLayout.setHint(community.getName());
-        descriptionLayout.setHint(community.getDescription());
+        titleText.setText(community.getName());
+        descriptionText.setText(community.getDescription());
 
         CommunityController communityController = RetrofitUtils
                 .getInstance().getRetrofit().create(CommunityController.class);

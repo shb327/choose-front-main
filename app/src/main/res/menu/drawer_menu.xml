@@ -7,24 +7,24 @@
     <item
         android:id="@+id/communities"
         android:icon="@drawable/ic_round_space_dashboard_24"
-        android:title="Manage Communities"
+        android:title="@string/manage_communities"
         app:showAsAction="ifRoom" />
 
     <item
         android:id="@+id/create"
         android:icon="@drawable/ic_round_create_24"
-        android:title="Create Community"
+        android:title="@string/create_community"
         app:showAsAction="ifRoom" />
 
     <item
         android:id="@+id/delete"
         android:icon="@drawable/ic_round_delete_24"
-        android:title="Delete Community"
+        android:title="@string/delete_community"
         app:showAsAction="ifRoom" />
 
     <item
         android:id="@+id/logout"
         android:icon="@drawable/ic_round_logout_24"
-        android:title="Log Out"
+        android:title="@string/log_out"
         app:showAsAction="ifRoom" />
 </menu>

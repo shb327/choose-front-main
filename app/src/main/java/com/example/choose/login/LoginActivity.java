@@ -25,6 +25,8 @@ import com.example.choose.start.StartingActivity;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 
+import java.util.Objects;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -85,8 +87,24 @@ public class LoginActivity extends AppCompatActivity {
                         .enqueue(new Callback<Void>() {
                             @Override
                             public void onResponse(Call<Void> call, Response<Void> response) {
-                                Log.i("post", response.raw().request().headers().toString());
                                 if (response.code() == 200 || response.code() == 302) {
+                                    if(Objects.equals(response.raw().headers().get("X-role"), "registration")) {
+                                        email.setTextColor(Color.parseColor("#F75010"));
+                                        email.setHintTextColor(Color.parseColor("#F75010"));
+                                        email.setCompoundDrawablesRelativeWithIntrinsicBounds(0, 0, R.drawable.ic_round_highlight_off_24, 0);
+                                        password.setTextColor(Color.parseColor("#F75010"));
+                                        password.setCompoundDrawablesRelativeWithIntrinsicBounds(0, 0, R.drawable.ic_round_highlight_off_24, 0);
+                                        passwordLayout.setEndIconTintList(ColorStateList.valueOf(Color.parseColor("#F75010")));
+                                        passwordLayout.setDefaultHintTextColor(ColorStateList.valueOf(Color.parseColor("#F75010")));
+                                        passwordLayout.setHintTextColor(ColorStateList.valueOf(Color.parseColor("#F75010")));
+                                        txt.setTextColor(Color.parseColor("#F75010"));
+                                        txt.startAnimation(shake);
+                                        txt.setText("No matching records");
+                                        emailLayout.startAnimation(shake);
+                                        passwordLayout.startAnimation(shake);
+                                        Log.i("Login Error", response.raw().headers().get("X-role"));
+                                        return;
+                                    }
                                     utils.login(email.getText().toString(), password.getText().toString());
                                     utils.updateRetrofit();
                                     startActivity(new Intent(LoginActivity.this, HomeActivity.class));
@@ -105,6 +123,7 @@ public class LoginActivity extends AppCompatActivity {
                                     emailLayout.startAnimation(shake);
                                     passwordLayout.startAnimation(shake);
                                 }
+                                Log.i("Login", response.raw().headers().get("X-role"));
                             }
 
                             @Override

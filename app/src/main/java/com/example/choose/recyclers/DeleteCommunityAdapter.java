@@ -69,8 +69,10 @@ public class DeleteCommunityAdapter extends RecyclerView.Adapter<DeleteCommunity
         notifyItemRangeChanged(position, localDataSet.size());
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener, View.OnLongClickListener {
-        private WeakReference<ClickListener> listenerRef;
+    public class ViewHolder
+            extends RecyclerView.ViewHolder
+            implements View.OnClickListener, View.OnLongClickListener {
+        private final WeakReference<ClickListener> listenerRef;
         private final TextView name;
         private final TextView username;
         Button button;

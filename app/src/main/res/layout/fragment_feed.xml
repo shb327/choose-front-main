@@ -52,4 +52,7 @@
         app:itemTextColor="#68B2A0"
         app:headerLayout="@layout/nav_header"
         app:menu="@menu/drawer_menu" />
+
+
+
 </androidx.drawerlayout.widget.DrawerLayout>

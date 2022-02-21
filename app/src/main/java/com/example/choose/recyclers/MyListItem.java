@@ -34,4 +34,8 @@ public class MyListItem{
         }
         return items;
     }
+
+    public boolean isSetUp(){
+        return mediaUri != null && title != null;
+    }
 }

@@ -59,9 +59,7 @@ public class PetitionPostDTO extends PostDTO {
         this.votedCount = votedCount;
     }
 
-    public Boolean getVoted() {
-        return voted;
-    }
+    public Boolean getVoted() { return voted; }
 
     public void setVoted(Boolean voted) {
         this.voted = voted;

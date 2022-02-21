@@ -48,7 +48,7 @@
         app:errorTextColor="@color/error"
         android:inputType="text"
         android:maxLines="1"
-        android:hint="Email Address"
+        android:hint="Email address"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/email"
@@ -67,6 +67,8 @@
         android:layout_width="256dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:layout_below="@+id/outlinedTextField1"
+        android:layout_centerHorizontal="true"
         android:ems="10"
         android:fontFamily="@font/montserrat"
         app:boxStrokeColor="#56C596"
@@ -76,15 +78,17 @@
         app:boxStrokeErrorColor="#F75010"
         app:errorIconTint="@color/error"
         app:errorTextColor="@color/error"
-        android:inputType="textPersonName"
-        android:hint="First Name"
-        android:layout_below="@+id/outlinedTextField1"
-        android:layout_centerHorizontal="true"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        android:inputType="text"
+        android:maxLines="1"
+        android:hint="First name"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        >
+
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/first"
             android:maxLines="1"
             android:maxLength="20"
+            android:inputType="text"
             android:textColor="#56C596"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -97,6 +101,8 @@
         android:layout_width="256dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:layout_below="@+id/outlinedTextField2"
+        android:layout_centerHorizontal="true"
         android:ems="10"
         android:fontFamily="@font/montserrat"
         app:boxStrokeColor="#56C596"
@@ -106,16 +112,18 @@
         app:boxStrokeErrorColor="#F75010"
         app:errorIconTint="@color/error"
         app:errorTextColor="@color/error"
-        android:inputType="textPersonName"
-        android:hint="Last Name"
-        android:layout_below="@+id/outlinedTextField2"
-        android:layout_centerHorizontal="true"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        android:inputType="text"
+        android:maxLines="1"
+        android:hint="Last name"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        >
+
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/last"
             android:maxLines="1"
             android:maxLength="20"
             android:textColor="#56C596"
+            android:inputType="text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             />

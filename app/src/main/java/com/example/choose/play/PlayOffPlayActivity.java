@@ -107,6 +107,7 @@ public class PlayOffPlayActivity extends AppCompatActivity {
                             i.putExtra("url", tournament.getWinner().getValue().getMedia());
                             i.putExtra("name", tournament.getWinner().getValue().getTitle());
                             i.putExtra("id", id);
+                            i.putExtra("winner", tournament.getWinner().getValue().getId());
                             startActivity(i);
                             return;
                         }
@@ -124,6 +125,7 @@ public class PlayOffPlayActivity extends AppCompatActivity {
                             i.putExtra("url", tournament.getWinner().getValue().getMedia());
                             i.putExtra("name", tournament.getWinner().getValue().getTitle());
                             i.putExtra("id", id);
+                            i.putExtra("winner", tournament.getWinner().getValue().getId());
                             startActivity(i);
                             return;
                         }
@@ -141,6 +143,7 @@ public class PlayOffPlayActivity extends AppCompatActivity {
                             i.putExtra("url", tournament.getWinner().getValue().getMedia());
                             i.putExtra("name", tournament.getWinner().getValue().getTitle());
                             i.putExtra("id", id);
+                            i.putExtra("winner", tournament.getWinner().getValue().getId());
                             startActivity(i);
                             return;
                         }
@@ -158,6 +161,7 @@ public class PlayOffPlayActivity extends AppCompatActivity {
                             i.putExtra("url", tournament.getWinner().getValue().getMedia());
                             i.putExtra("name", tournament.getWinner().getValue().getTitle());
                             i.putExtra("id", id);
+                            i.putExtra("winner", tournament.getWinner().getValue().getId());
                             startActivity(i);
                             return;
                         }

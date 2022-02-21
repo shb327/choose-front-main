@@ -21,6 +21,7 @@ import com.example.choose.api.PostController;
 import com.example.choose.dto.ImagePostDTO;
 import com.example.choose.dto.LikeStatus;
 import com.example.choose.dto.PetitionPostDTO;
+import com.example.choose.dto.PlayOffOptionDTO;
 import com.example.choose.dto.PlayOffPostDTO;
 import com.example.choose.dto.PostDTO;
 import com.example.choose.dto.PostType;
@@ -267,6 +268,16 @@ public class FeedAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
                 }else{
                     playOffPostViewHolder.getDislike().setImageResource(R.drawable.obh);
                     playOffPostViewHolder.getLike().setImageResource(R.drawable.onh);
+                }
+                PlayOffPostDTO playOffPostDTO = ((PlayOffPostDTO) post);
+                List<PlayOffOptionDTO> options = new ArrayList<>(playOffPostDTO.getOptions());
+                for (PlayOffOptionDTO option: options) {
+                    if(option.getVoted()){
+                        playOffPostViewHolder.getPlay().setText("Played");
+                        playOffPostViewHolder.getPlay().setBackgroundColor(Color.parseColor("#329D9C"));
+                        playOffPostViewHolder.getPlay().setTextColor(Color.WHITE);
+                        playOffPostViewHolder.getPlay().setClickable(false);
+                    }
                 }
                 break;
         }
@@ -1096,6 +1107,8 @@ public class FeedAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
         public ImageView getDislike() {
             return dislike;
         }
+
+        public Button getPlay() { return play; }
 
         public void setPostDTO(PostDTO postDTO) {
             this.postDTO = postDTO;

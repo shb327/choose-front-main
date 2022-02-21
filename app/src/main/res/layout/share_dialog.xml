@@ -28,7 +28,7 @@
             app:strokeColor="#329D9C" />
         <TextView
             android:id="@+id/lbl_your_name"
-            android:text="Chose Community:"
+            android:text="Choose community:"
             android:paddingRight="40dp"
             android:fontFamily="@font/montserrat"
             android:textSize="18sp"

@@ -119,7 +119,6 @@
             app:boxStrokeErrorColor="#F75010"
             app:errorIconTint="@color/white"
             app:errorTextColor="@color/error"
-            android:theme="@style/TextInputLayoutStyle"
             app:layout_constraintEnd_toStartOf="@+id/field4CardView"
             app:layout_constraintStart_toEndOf="@+id/field2CardView"
             app:layout_constraintTop_toBottomOf="@+id/text_verify">
@@ -181,7 +180,6 @@
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
             android:fontFamily="sans-serif"
-            android:text="Please double-check your Varification Code"
             android:textAlignment="center"
             android:textColor="#ffffff"
             android:textSize="16sp"
@@ -206,7 +204,7 @@
             app:layout_constraintTop_toBottomOf="@+id/field2CardView" />
 
         <TextView
-            android:id="@+id/reend"
+            android:id="@+id/resend"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="38dp"

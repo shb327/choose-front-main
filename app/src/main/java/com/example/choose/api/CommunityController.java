@@ -26,7 +26,9 @@ public interface CommunityController {
     Call<List<CommunityDTO>> getUserOwning();
 
     @GET("/api/communities/discover")
-    Call<List<CommunityDTO>> getDiscoverCommunity(@Query("page") int page, @Query("size") int size);
+    Call<List<CommunityDTO>> getDiscoverCommunity(
+            @Query("page") int page,
+            @Query("size") int size);
 
     @POST("/api/communities/post/add")
     Call<Void> addPost (@Query("communityId") int communityId, @Query("postId") int postId);

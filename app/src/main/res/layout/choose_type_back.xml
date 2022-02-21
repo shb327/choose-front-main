@@ -198,7 +198,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="8dp"
-                            android:text="Up to 512 Options"
+                            android:text="Up to 256 Options"
                             android:textAppearance="?attr/textAppearanceBody2"
                             android:textColor="#205072" />
                     </LinearLayout>

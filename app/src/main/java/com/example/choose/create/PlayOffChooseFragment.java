@@ -41,6 +41,7 @@ public class PlayOffChooseFragment extends Fragment {
 
     public static boolean isReady;
     public static int number;
+    public static String title;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -175,8 +176,8 @@ public class PlayOffChooseFragment extends Fragment {
                     titleLayout.setErrorEnabled(true);
                     titleLayout.setError("Character limit exceeded");
                     titleTxt.setTextColor(Color.parseColor("#F75010"));
-                }
-                else {
+                } else {
+                    setTitle(titleTxt.getText().toString());
                     titleLayout.setErrorEnabled(false);
                     titleLayout.setError(null);
                     titleTxt.setTextColor(Color.parseColor("#68B2A0"));
@@ -201,5 +202,13 @@ public class PlayOffChooseFragment extends Fragment {
 
     public static void setNumber(int number) {
         PlayOffChooseFragment.number = number;
+    }
+
+    public static String getTitle() {
+        return title;
+    }
+
+    public static void setTitle(String title) {
+        PlayOffChooseFragment.title = title;
     }
 }

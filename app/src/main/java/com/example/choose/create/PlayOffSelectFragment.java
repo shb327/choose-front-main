@@ -16,7 +16,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.choose.R;
 import com.example.choose.api.PostController;
-import com.example.choose.dto.PlayOffOptionDTO;
 import com.example.choose.dto.PlayOffRequestOptionDTO;
 import com.example.choose.dto.PostDTO;
 import com.example.choose.home.HomeActivity;
@@ -27,7 +26,6 @@ import com.google.gson.Gson;
 
 import java.io.File;
 import java.util.ArrayList;
-import java.util.function.IntToDoubleFunction;
 import java.util.stream.Collectors;
 
 import okhttp3.MediaType;
@@ -42,6 +40,7 @@ public class PlayOffSelectFragment extends Fragment {
     private MyRecyclerViewAdapter adapter;
     ArrayList<MyListItem> myListItems;
     private RecyclerView items;
+    private String postTitle;
     PostController postController;
 
     public PlayOffSelectFragment() { }
@@ -57,31 +56,28 @@ public class PlayOffSelectFragment extends Fragment {
         Uri uri = data.getData();
         myListItems.get(adapter.getUploadPosition()).setMediaUri(uri);
         adapter.notifyDataSetChanged();
-//        res.setImageURI(uri);
-//        File file = FileUtils.getFile(getContext(), uri);
-//        RequestBody requestFile = RequestBody.create(MediaType.parse("uri"), file);
-//        body = MultipartBody.Part.createFormData("file", file.getName(), requestFile);
-//        uploaded = true;
-//        block.setClickable(false);
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View inflate =  inflater.inflate(R.layout.fragment_play_off_select, container, false);
         items = (RecyclerView) inflate.findViewById(R.id.recycler);
+        assert getArguments() != null;
         myListItems = MyListItem.createContactsList(getArguments().getInt("choice"));
+        postTitle = getArguments().getString("title");
         adapter = new MyRecyclerViewAdapter(myListItems, this);
         items.setAdapter(adapter);
         items.setLayoutManager(new LinearLayoutManager(inflate.getContext()));
-
         return inflate;
     }
 
     @RequiresApi(api = Build.VERSION_CODES.N)
     public void upload(){
+        for (MyListItem i :myListItems) if(!i.isSetUp()) return;
+
         postController = RetrofitUtils.getInstance().getRetrofit().create(PostController.class);
 
-        RequestBody title = RequestBody.create(MediaType.parse("text/plain"), "Title");
+        RequestBody title = RequestBody.create(MediaType.parse("text/plain"), postTitle);
 
         Gson gson = new Gson();
 

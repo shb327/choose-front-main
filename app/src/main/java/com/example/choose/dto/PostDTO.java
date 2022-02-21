@@ -13,7 +13,8 @@ public class PostDTO implements Serializable {
 
     public PostDTO() { }
 
-    public PostDTO(Long id, Long authorId, String authorUsername, String title, PostType type, Integer likesCount, LikeStatus likeStatus) {
+    public PostDTO(Long id, Long authorId, String authorUsername, String title, PostType type,
+                   Integer likesCount, LikeStatus likeStatus) {
         this.id = id;
         this.authorId = authorId;
         this.authorUsername = authorUsername;
